@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Algonex</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo1.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Header Styling */
+        .project-header {
+            background: linear-gradient(135deg, #00B4D7, #008CAA);
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+            width: 100%;
+        }
+
+        .project-header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .project-header p {
+            font-size: 1.2rem;
+        }
+
+        /* Tree Structure Styling (Left Side) */
+        .tree {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid #00B4D7;
+            margin-top: 20px;
+        }
+
+        .branch {
+            margin-bottom: 40px;
+            position: relative;
+            padding-left: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .branch:hover {
+            transform: translateX(10px);
+        }
+
+        .branch::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -15px;
+            width: 10px;
+            height: 10px;
+            background-color: #00B4D7;
+            border-radius: 50%;
+        }
+
+        .branch-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00B4D7;
+            margin-bottom: 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .branch:hover .branch-title {
+            color: #008CAA;
+        }
+
+        .project-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .project-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .project-item i {
+            font-size: 1.5rem;
+            color: #00B4D7;
+            margin-right: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-item:hover i {
+            transform: scale(1.2);
+            color: #008CAA;
+        }
+
+        .project-item span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Right Section Enhancements */
+        .right-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .right-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .right-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .right-box h5 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #00B4D7;
+            margin-bottom: 15px;
+        }
+
+        .right-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .right-box ul li {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .right-box ul li i {
+            color: #00B4D7;
+            margin-right: 10px;
+        }
+
+        /* Trending Projects Section */
+        .trending-projects {
+            margin-top: 30px;
+        }
+
+        .trending-project {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .trending-project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .trending-project i {
+            font-size: 2rem;
+            color: #00B4D7;
+            margin-right: 15px;
+        }
+
+        .trending-project h6 {
+            font-size: 1.2rem;
+            color: #00B4D7;
+            margin: 0 0 5px 0;
+        }
+
+        .trending-project p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .right-section {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/web_logo.png" alt="Algonex Logo" style="height: 40px; width: auto; margin-right: 10px;">
+            <h2 class="m-0 text-primary">Algonex</h2> 
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="projects.html" class="nav-item nav-link active">Projects</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="project-header">
+        <h1>Real-Time Projects</h1>
+        <p>Explore Projects Across Different Domains</p>
+    </div>
+    <!-- Header End -->
+
+    <!-- Content Start -->
+    <div class="container">
+        <!-- Left Section (Tree Structure) -->
+        <div class="tree">
+            <div class="branch">
+                <h3 class="branch-title">Web Development</h3>
+                <ul class="project-list">
+                    <li class="project-item"><i class="fas fa-code"></i><span>Portfolio Website</span></li>
+                    <li class="project-item"><i class="fas fa-shopping-cart"></i><span>E-commerce Platform</span></li>
+                </ul>
+            </div>
+            <div class="branch">
+                <h3 class="branch-title">Data Analytics</h3>
+                <ul class="project-list">
+                    <li class="project-item"><i class="fas fa-chart-line"></i><span>Data Visualization Dashboards</span></li>
+                    <li class="project-item"><i class="fas fa-database"></i><span>Customer Segmentation Analysis</span></li>
+                </ul>
+            </div>
+            <div class="branch">
+                <h3 class="branch-title">Full Stack Development</h3>
+                <ul class="project-list">
+                    <li class="project-item"><i class="fas fa-users"></i><span>Social Media App</span></li>
+                    <li class="project-item"><i class="fas fa-user-circle"></i><span>User Authentication System</span></li>
+                </ul>
+            </div>
+            <div class="branch">
+                <h3 class="branch-title">Skill Enhancement</h3>
+                <ul class="project-list">
+                    <li class="project-item"><i class="fas fa-robot"></i><span>Chatbot Development</span></li>
+                    <li class="project-item"><i class="fas fa-cogs"></i><span>Automation Script</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Section (Enhancements) -->
+        <div class="right-section">
+            <!-- Key Insights Box -->
+            <div class="right-box">
+                <h5>Key Insights</h5>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Hands-on real-time experience with live projects.</li>
+                    <li><i class="fas fa-check-circle"></i> Use of industry-standard tools and technologies.</li>
+                    <li><i class="fas fa-check-circle"></i> Projects cover diverse domains and programming languages.</li>
+                </ul>
+            </div>
+
+            <!-- Trending Projects -->
+            <div class="trending-projects">
+                <h5>Trending Projects</h5>
+                <div class="trending-project">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h6>Data Analytics Dashboard</h6>
+                        <p>Analyze business data for key insights.</p>
+                    </div>
+                </div>
+                <div class="trending-project">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div>
+                        <h6>E-commerce Platform</h6>
+                        <p>Develop an online shopping website.</p>
+                    </div>
+                </div>
+                <div class="trending-project">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <h6>Chatbot Development</h6>
+                        <p>Create a conversational chatbot.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="privacy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="terms.html">Terms & Conditions</a>
+                    <a class="btn btn-link" href="faq.html">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Marthahalli, Bangalore</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 99597 89424</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>algonexacademy@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-4.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-5.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Get Daily Technology Updates.</p>
+                    <form action="thank-you.html" method="GET" class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" name="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Algonex Academy</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="faq.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

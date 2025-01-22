@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us - Algonex Academy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Algonex Academy - Learn, Grow, Succeed" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #00B4D7, #008CAA);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Tree Structure */
+        .tree-structure {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .tree-structure h2 {
+            font-size: 2.5rem;
+            color: #00B4D7;
+            margin-bottom: 40px;
+        }
+
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .tree-line {
+            width: 4px;
+            background: #00B4D7;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        .tree-node {
+            width: 250px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .tree-node:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .tree-node i {
+            font-size: 2.5rem;
+            color: #00B4D7;
+            margin-bottom: 10px;
+        }
+
+        .tree-node h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .tree-node p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .tree-branches {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Founders Section */
+        .founders-section {
+            background: #ffffff;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+
+        .founder-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .founder-card h4 {
+            font-size: 1.6rem;
+            color: #00B4D7;
+            margin-bottom: 20px;
+        }
+
+        .founder-card p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .founder-card span {
+            font-style: italic;
+            color: #00B4D7;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tree-branches {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tree-node {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/web_logo.png" alt="Algonex Logo" style="height: 40px; width: auto; margin-right: 10px;">
+            <h2 class="m-0 text-primary">Algonex Academy</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link ">Home</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        
+                    </div>
+                </div>
+                <a href="contact_map.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>About Algonex Academy</h1>
+        <p>Your partner in skill development and success</p>
+    </div>
+
+    <!-- Tree Structure Section -->
+    <div class="tree-structure">
+        <h2>Our Journey</h2>
+        <div class="tree">
+            <div class="tree-line"></div>
+            <div class="tree-node">
+                <i class="fas fa-users"></i>
+                <h4>Who We Are</h4>
+                <p>Algonex Academy provides practical training in IT and data science domains, empowering students to achieve career success.</p>
+            </div>
+            <div class="tree-line"></div>
+            <div class="tree-branches">
+                <div class="tree-node">
+                    <i class="fas fa-bullseye"></i>
+                    <h4>Our Mission</h4>
+                    <p>We aim to bridge the gap between education and industry with affordable, high-quality training.</p>
+                </div>
+                <div class="tree-node">
+                    <i class="fas fa-star"></i>
+                    <h4>Our Values</h4>
+                    <p>Integrity, inclusivity, and excellence define our approach to education and mentorship.</p>
+                </div>
+                <div class="tree-node">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Why Choose Us</h4>
+                    <p>We focus on hands-on learning, real-world projects, and industry internships to prepare students for the job market.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Founders Section -->
+    <div class="founders-section">
+        <div class="founder-card">
+            <h4>Message from the Founder</h4>
+            <p>At Algonex Academy, we believe that education should inspire and empower individuals to dream big and achieve their goals.</p>
+            <span>- Founder</span>
+        </div>
+        <div class="founder-card">
+            <h4>Message from the Co-Founder</h4>
+            <p>Our vision is to create a supportive and inclusive learning environment where every student thrives and succeeds.</p>
+            <span>- Co-Founder</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; Algonex Academy, All Rights Reserved.</p>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

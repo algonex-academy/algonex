@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CA Curriculum - Algonex</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        .library-header {
+            background: #00B4D7;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+            margin-bottom: 40px;
+        }
+
+        .library-header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .library-header p {
+            font-size: 1.2rem;
+        }
+
+        .breadcrumb a {
+            color: #d4f1f9;
+        }
+
+        .breadcrumb a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* CA Curriculum Section Styling */
+        .curriculum {
+            margin-top: 50px;
+        }
+
+        .curriculum h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .curriculum .curriculum-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .curriculum .curriculum-container .section {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .curriculum .curriculum-container .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .curriculum .section h2 {
+            font-size: 2rem;
+            color: #00B4D7;
+            margin-bottom: 15px;
+        }
+
+        .curriculum .section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .curriculum .section ul li {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .curriculum .curriculum-container {
+                flex-direction: column;
+            }
+
+            .curriculum .curriculum-container .section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/web_logo.png" alt="Algonex Logo" style="height: 40px; width: auto; margin-right: 10px;">
+            <h2 class="m-0 text-primary">Algonex</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link ">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link active">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        
+                    </div>
+                </div>
+                <a href="contact_map.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="library-header">
+        <h1>CA Curriculum</h1>
+        <p>Explore the curriculum structure for Chartered Accountancy</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">CA Curriculum</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Header End -->
+
+    <!-- Content Start -->
+    <div class="container curriculum">
+        <h1>Chartered Accountancy (CA) Curriculum</h1>
+
+        <div class="curriculum-container">
+            <!-- CA Foundation Section -->
+            <div class="section">
+                <h2>CA Foundation</h2>
+                <ul>
+                    <li>Principles and Practice of Accounting</li>
+                    <li>Business Laws and Business Correspondence</li>
+                    <li>Business Mathematics and Logical Reasoning</li>
+                    <li>Business Economics and Business and Commercial Knowledge</li>
+                </ul>
+            </div>
+
+            <!-- CA Intermediate Section -->
+            <div class="section">
+                <h2>CA Intermediate</h2>
+                <ul>
+                    <li>Accounting</li>
+                    <li>Corporate and Other Laws</li>
+                    <li>Cost and Management Accounting</li>
+                    <li>Taxation</li>
+                    <li>Advanced Accounting</li>
+                    <li>Auditing and Assurance</li>
+                    <li>Enterprise Information Systems & Strategic Management</li>
+                    <li>Financial Management & Economics for Finance</li>
+                </ul>
+            </div>
+
+            <!-- CA Final Section -->
+            <div class="section">
+                <h2>CA Final</h2>
+                <ul>
+                    <li>Financial Reporting</li>
+                    <li>Strategic Financial Management</li>
+                    <li>Advanced Auditing and Professional Ethics</li>
+                    <li>Corporate and Economic Laws</li>
+                    <li>Strategic Cost Management and Performance Evaluation</li>
+                    <li>Elective Papers (Risk Management, Financial Services, etc.)</li>
+                    <li>Direct Tax Laws and International Taxation</li>
+                    <li>Indirect Tax Laws</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="privacy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="terms.html">Terms & Conditions</a>
+                    <a class="btn btn-link" href="faq.html">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Marthahalli, Bangalore</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 99597 89424</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>algonexacademy@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-4.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-5.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Get Daily Technology Updates.</p>
+                    <form action="thank-you.html" method="GET" class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" name="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Algonex Academy</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="faq.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
