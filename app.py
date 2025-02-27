@@ -7,7 +7,7 @@ app = Flask(__name__)
 db = mysql.connector.connect(
     host="bobby2508.mysql.pythonanywhere-services.com",  # Your PythonAnywhere MySQL host
     user="bobby2508",  # Your PythonAnywhere MySQL username
-    password="your_mysql_password",  # Replace with your actual password
+    password="Qwertyuiop@2002",  # Replace with your actual password
     database="bobby2508$algonex_db"  # Use the full database name with your username prefix
 )
 cursor = db.cursor()
